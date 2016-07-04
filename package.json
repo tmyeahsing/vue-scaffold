@@ -1,7 +1,7 @@
 {
   "name": "vue-scaffold",
   "version": "1.0.0",
-  "description": "a scaffold for vue developers",
+  "description": "a scaffold for vue developers, based on vue-cli",
   "main": "index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
