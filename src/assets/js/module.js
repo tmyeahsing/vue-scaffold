@@ -3,5 +3,5 @@ export default{
         "use strict";
         return 'I\'m required by vue component';
     },
-    url: 'http://www.baidu.com'
+    url: 'https://github.com/tmyeahsing/vue-scaffold'
 }
