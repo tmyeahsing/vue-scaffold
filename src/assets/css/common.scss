@@ -1,0 +1,9 @@
+@charset "urf-8";
+@import "mixins";
+
+.com_radius{
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  @include Radius(5px);
+}
