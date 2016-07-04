@@ -1,6 +1,8 @@
 var express = require('express')
 var webpack = require('webpack')
 var config = require('./webpack.dev.conf')
+var serveIndex = require('serve-index')
+var c = require('child_process')
 
 var app = express()
 var compiler = webpack(config)
@@ -22,6 +24,8 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
+//serve-index
+app.use('/', serveIndex('./src/views', {'icons': true}))
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
 // serve webpack bundle output
@@ -39,3 +43,6 @@ app.listen(8080, function (err) {
   }
   console.log('Listening at http://localhost:8080')
 })
+
+//open localhost
+c.exec('start http://localhost:8080')
