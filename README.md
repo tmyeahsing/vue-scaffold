@@ -1,6 +1,6 @@
 # helloworld
 
-> A scaffold for Vue developers
+> A scaffold for vue developers. Based on vue-cli
 
 ## Build Setup
 
