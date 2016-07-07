@@ -59,6 +59,15 @@ config.plugins = (config.plugins || []).concat([
     filename: '../views/'+ key +'.html',
     template: 'src/views/'+ key +'.html',
     chunks: ['common', key],
+    chunksSortMode: function(a, b){
+      if(a.names[0] === 'common'){
+        return -1;
+      }else if(b.names[0] === 'common'){
+        return 1;
+      }else{
+        return a.id - b.id;
+      }
+    },
     inject: true,
     minify: {
       removeComments: true,
